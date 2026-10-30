@@ -40,7 +40,7 @@ import static org.mockito.Mockito.*;
 class TransactionServiceTest {
 
     private static final UUID USER_ID =
-            UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d");
+            UUID.fromString("464e185b-05c4-4d68-9b4c-2945b13c2703");
 
     @Mock
     private TransactionRepository transactionRepository;

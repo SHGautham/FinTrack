@@ -33,6 +33,9 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final UserRepository userRepository;
 
+    private final UUID userId = UUID.fromString("464e185b-05c4-4d68-9b4c-2945b13c2703");
+
+
     public TransactionServiceImpl(TransactionRepository transactionRepository, TransactionMapperImpl transactionMapper, CategoryRepository categoryRepository, UserRepository userRepository) {
         this.transactionRepository = transactionRepository;
         this.transactionMapper = transactionMapper;
@@ -52,7 +55,7 @@ public class TransactionServiceImpl implements TransactionService {
         }
 
         transaction.setCategory(category);
-        User user = userRepository.findById(UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d")).orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
         transaction.setUser(user);
         return transactionMapper.toTransactionResponseDTO(transactionRepository.save(transaction));
     }
@@ -61,26 +64,26 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public List<TransactionResponseDTO> getAllTransaction() {
 
-        List<Transaction> transactions = transactionRepository.findByUser_Id( UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d") );
+        List<Transaction> transactions = transactionRepository.findByUser_Id( userId );
 
         return transactionMapper.toTransactionResponseDtoList(transactions);
     }
 
     @Override
     public List<TransactionResponseDTO> getAllTransaction(TransactionType type) {
-        List<Transaction> transactions = transactionRepository.findByUser_IdAndType( UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d") , type );
+        List<Transaction> transactions = transactionRepository.findByUser_IdAndType( userId , type );
         return transactionMapper.toTransactionResponseDtoList(transactions);
     }
 
     @Override
     public TransactionResponseDTO getTransactionByID(UUID id) {
-        return transactionMapper.toTransactionResponseDTO(transactionRepository.findByIdAndUser_Id(id, UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d")).orElseThrow(() -> new TransactionNotFoundException("Transaction not found")));
+        return transactionMapper.toTransactionResponseDTO(transactionRepository.findByIdAndUser_Id(id, userId).orElseThrow(() -> new TransactionNotFoundException("Transaction not found")));
     }
 
 //    update
     @Override
     public TransactionResponseDTO updateTransaction(TransactionPatchRequestDTO patchRequestDTO, UUID transactionID) {
-       Transaction transaction = transactionRepository.findByIdAndUser_Id(transactionID , UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d") ).map(existingUser -> {
+       Transaction transaction = transactionRepository.findByIdAndUser_Id(transactionID , userId ).map(existingUser -> {
            Optional.ofNullable(patchRequestDTO.getAmount()).ifPresent(existingUser::setAmount);
            Optional.ofNullable(patchRequestDTO.getDate()).ifPresent(existingUser::setDate);
            Optional.ofNullable(patchRequestDTO.getDescription()).ifPresent(existingUser::setDescription);
@@ -119,7 +122,7 @@ public class TransactionServiceImpl implements TransactionService {
 //    delete
     @Override
     public void deleteTransaction(UUID id) {
-        Transaction transaction = transactionRepository.findByIdAndUser_Id(id,UUID.fromString("d6d3453c-a1d3-46c5-a811-54eb5896326d")).orElseThrow(() -> new TransactionNotFoundException("Transaction Not found"));
+        Transaction transaction = transactionRepository.findByIdAndUser_Id(id,userId).orElseThrow(() -> new TransactionNotFoundException("Transaction Not found"));
         transactionRepository.delete(transaction);
     }
 
