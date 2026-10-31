@@ -1,12 +1,11 @@
 package com.demo.fintrack.Mapper;
 
-import com.demo.fintrack.Domain.DTO.BudgetRequestDTO;
-import com.demo.fintrack.Domain.DTO.BudgetResponseDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetRequestDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetResponseDTO;
 import com.demo.fintrack.Domain.Entity.Budget;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Component
 public class BudgetMapper {

@@ -1,4 +1,4 @@
-package com.demo.fintrack.Domain.DTO;
+package com.demo.fintrack.Domain.DTO.BudgetDTOs;
 
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;

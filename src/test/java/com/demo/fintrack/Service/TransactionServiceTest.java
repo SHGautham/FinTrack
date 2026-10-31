@@ -1,9 +1,9 @@
 package com.demo.fintrack.Service;
 
 import com.demo.fintrack.Domain.CategoryType;
-import com.demo.fintrack.Domain.DTO.TransactionPatchRequestDTO;
-import com.demo.fintrack.Domain.DTO.TransactionRequestDTO;
-import com.demo.fintrack.Domain.DTO.TransactionResponseDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionPatchRequestDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionRequestDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionResponseDTO;
 import com.demo.fintrack.Domain.Entity.Category;
 import com.demo.fintrack.Domain.Entity.Transaction;
 import com.demo.fintrack.Domain.Entity.User;
@@ -31,8 +31,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.demo.fintrack.Domain.TransactionType.EXPENSE;
-import static org.hamcrest.Matchers.any;
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
 import static org.mockito.Mockito.*;
 

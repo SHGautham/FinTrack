@@ -1,4 +1,4 @@
-package com.demo.fintrack.Domain.DTO;
+package com.demo.fintrack.Domain.DTO.BudgetDTOs;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

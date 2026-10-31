@@ -1,8 +1,8 @@
 package com.demo.fintrack.Service;
 
-import com.demo.fintrack.Domain.DTO.BudgetPatchRequestDTO;
-import com.demo.fintrack.Domain.DTO.BudgetRequestDTO;
-import com.demo.fintrack.Domain.DTO.BudgetResponseDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetPatchRequestDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetRequestDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetResponseDTO;
 
 import java.time.YearMonth;
 import java.util.List;

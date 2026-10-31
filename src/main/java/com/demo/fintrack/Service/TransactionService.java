@@ -1,9 +1,8 @@
 package com.demo.fintrack.Service;
 
-import com.demo.fintrack.Domain.DTO.TransactionPatchRequestDTO;
-import com.demo.fintrack.Domain.DTO.TransactionRequestDTO;
-import com.demo.fintrack.Domain.DTO.TransactionResponseDTO;
-import com.demo.fintrack.Domain.Entity.Transaction;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionPatchRequestDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionRequestDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionResponseDTO;
 import com.demo.fintrack.Domain.TransactionType;
 import com.demo.fintrack.Service.Exception.CategoryNotFoundException;
 

@@ -1,11 +1,6 @@
-package com.demo.fintrack.Domain.DTO;
+package com.demo.fintrack.Domain.DTO.TransactionDTOs;
 
-import com.demo.fintrack.Domain.Entity.Category;
 import com.demo.fintrack.Domain.TransactionType;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,21 +14,17 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TransactionRequestDTO {
+public class TransactionResponseDTO {
 
-    @NotNull
-    @Positive
+    private UUID id;
+
     private BigDecimal amount;
 
-    @NotNull
     private TransactionType type;
 
-    @NotNull
     private LocalDate date;
 
     private String description;
 
-    @NotNull
-    private UUID categoryId;
-
+    private String categoryName;
 }

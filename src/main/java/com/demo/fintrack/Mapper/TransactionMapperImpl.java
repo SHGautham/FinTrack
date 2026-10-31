@@ -1,7 +1,7 @@
 package com.demo.fintrack.Mapper;
 
-import com.demo.fintrack.Domain.DTO.TransactionRequestDTO;
-import com.demo.fintrack.Domain.DTO.TransactionResponseDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionRequestDTO;
+import com.demo.fintrack.Domain.DTO.TransactionDTOs.TransactionResponseDTO;
 import com.demo.fintrack.Domain.Entity.Transaction;
 import org.springframework.stereotype.Component;
 

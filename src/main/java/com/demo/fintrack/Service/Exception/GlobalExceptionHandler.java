@@ -39,6 +39,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exception.getMessage());
     }
 
+    @ExceptionHandler(UserAlreadyFoundException.class)
+    public ResponseEntity<String> handleUserAlreadyFoundException(UserAlreadyFoundException exception){
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(exception.getMessage());
+    }
+
 //    Budget
 
     @ExceptionHandler(BudgetNotFoundException.class)

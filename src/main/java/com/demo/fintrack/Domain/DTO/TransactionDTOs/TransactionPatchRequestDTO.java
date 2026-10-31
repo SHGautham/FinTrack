@@ -1,4 +1,4 @@
-package com.demo.fintrack.Domain.DTO;
+package com.demo.fintrack.Domain.DTO.TransactionDTOs;
 
 import com.demo.fintrack.Domain.TransactionType;
 import jakarta.validation.constraints.Positive;

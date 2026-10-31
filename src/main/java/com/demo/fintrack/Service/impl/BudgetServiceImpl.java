@@ -1,9 +1,9 @@
 package com.demo.fintrack.Service.impl;
 
 import com.demo.fintrack.Domain.CategoryType;
-import com.demo.fintrack.Domain.DTO.BudgetPatchRequestDTO;
-import com.demo.fintrack.Domain.DTO.BudgetRequestDTO;
-import com.demo.fintrack.Domain.DTO.BudgetResponseDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetPatchRequestDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetRequestDTO;
+import com.demo.fintrack.Domain.DTO.BudgetDTOs.BudgetResponseDTO;
 import com.demo.fintrack.Domain.Entity.Budget;
 import com.demo.fintrack.Domain.Entity.Category;
 import com.demo.fintrack.Domain.Entity.User;
