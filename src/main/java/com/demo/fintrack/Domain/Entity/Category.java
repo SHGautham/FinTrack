@@ -28,6 +28,9 @@ public class Category {
     @Column(nullable = false)
     private CategoryType type;
 
+    @Column(nullable = false)
+    private String imageKey;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

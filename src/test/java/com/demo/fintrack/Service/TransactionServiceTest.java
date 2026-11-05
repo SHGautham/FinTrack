@@ -8,7 +8,7 @@ import com.demo.fintrack.Domain.Entity.Category;
 import com.demo.fintrack.Domain.Entity.Transaction;
 import com.demo.fintrack.Domain.Entity.User;
 import com.demo.fintrack.Domain.TransactionType;
-import com.demo.fintrack.Mapper.TransactionMapperImpl;
+import com.demo.fintrack.Mapper.TransactionMapper;
 import com.demo.fintrack.Repository.CategoryRepository;
 import com.demo.fintrack.Repository.TransactionRepository;
 import com.demo.fintrack.Repository.UserRepository;
@@ -50,7 +50,7 @@ class TransactionServiceTest {
     private UserRepository userRepository;
 
     @Mock
-    private TransactionMapperImpl transactionMapper;
+    private TransactionMapper transactionMapper;
 
     @InjectMocks
     private TransactionServiceImpl transactionService;

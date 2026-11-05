@@ -8,7 +8,7 @@ import com.demo.fintrack.Domain.Entity.Category;
 import com.demo.fintrack.Domain.Entity.Transaction;
 import com.demo.fintrack.Domain.Entity.User;
 import com.demo.fintrack.Domain.TransactionType;
-import com.demo.fintrack.Mapper.TransactionMapperImpl;
+import com.demo.fintrack.Mapper.TransactionMapper;
 import com.demo.fintrack.Repository.CategoryRepository;
 import com.demo.fintrack.Repository.TransactionRepository;
 import com.demo.fintrack.Repository.UserRepository;
@@ -27,7 +27,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final TransactionRepository transactionRepository;
 
-    private final TransactionMapperImpl transactionMapper;
+    private final TransactionMapper transactionMapper;
 
     private final CategoryRepository categoryRepository;
 
@@ -36,7 +36,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final UUID userId = UUID.fromString("464e185b-05c4-4d68-9b4c-2945b13c2703");
 
 
-    public TransactionServiceImpl(TransactionRepository transactionRepository, TransactionMapperImpl transactionMapper, CategoryRepository categoryRepository, UserRepository userRepository) {
+    public TransactionServiceImpl(TransactionRepository transactionRepository, TransactionMapper transactionMapper, CategoryRepository categoryRepository, UserRepository userRepository) {
         this.transactionRepository = transactionRepository;
         this.transactionMapper = transactionMapper;
         this.categoryRepository = categoryRepository;

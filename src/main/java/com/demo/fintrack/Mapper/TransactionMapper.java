@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class TransactionMapperImpl {
+public class TransactionMapper {
 
 
     public Transaction toEntity(TransactionRequestDTO transactionRequestDTO) {
